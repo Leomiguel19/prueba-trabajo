@@ -1,12 +1,7 @@
 <template>
   <div class="home">
-    <h2>Hola mundo</h2>
-    <div>
-      <b-button>Button</b-button>
-      <b-button variant="danger">Button</b-button>
-      <b-button variant="success">Button</b-button>
-      <b-button variant="outline-primary">Button</b-button>
-    </div>
+    <h2>Welcome to my application</h2>
+    <h2>{{name}}</h2>
   </div>
 </template>
 
@@ -14,9 +9,15 @@
 //import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  //name: 'Home',
-  //components: {
-    //HelloWorld
-  //}
+  data(){
+    return{
+      name: localStorage.getItem('name')
+    }
+  },
+  mounted(){
+    if(!localStorage.getItem('token')){
+      this.$router.push("/login");
+    }
+  }
 }
 </script>

@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/login">login</router-link> |
+      <router-link to="/login">login</router-link> 
     </div>
     <router-view/>
   </div>
@@ -15,7 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #f1f7fc;
+  background-color: #f1f7fc;
 }
 
 #nav {
