@@ -119,8 +119,8 @@ export default {
         .then((response) => {
           if (response.status==200) {
             alert(
-              "Has ingresado satisfactoriamente \n Bienvenido " +
-                response.data.data.name
+              "Has ingresado satisfactoriamente \n Bienvenido, " +
+                response.data.data.name + "!"
             );
 
             localStorage.setItem('token', response.data.data.token);
