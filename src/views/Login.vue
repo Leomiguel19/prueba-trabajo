@@ -1,5 +1,8 @@
 <template>
   <div class="login-clean">
+    <div id="nav">
+      <router-link to="/login">| Login | </router-link>
+    </div>
     <form
       style="background-color: rgba(255, 255, 255, 0.9)"
       @submit.prevent="login"
@@ -138,7 +141,6 @@ export default {
 
 <style lang="scss">
 .login-clean {
-  padding-top: 100px;
   padding-bottom: 150px;
   background-position: center;
   background-size: cover;
@@ -200,6 +202,22 @@ export default {
       &:active {
         text-decoration: none;
       }
+    }
+  }
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    .logout {
+      cursor: pointer;
+    }
+
+    &.router-link-exact-active {
+      color: #42b983;
     }
   }
 }
